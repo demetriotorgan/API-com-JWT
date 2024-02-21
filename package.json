@@ -1,0 +1,21 @@
+{
+  "name": "crud-completo-backend",
+  "version": "1.0.0",
+  "description": "Primeiro crud completo",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "author": "Demetrio Torgan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.0.3",
+    "nodemon": "^3.0.2",
+    "sucrase": "^3.35.0",
+    "uuid": "^9.0.1"
+  }
+}
