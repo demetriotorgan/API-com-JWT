@@ -1,4 +1,3 @@
-import mongoose from './mongoConection'
 import {Schema, model} from 'mongoose'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
@@ -14,7 +13,7 @@ const usuarioSchema = new Schema({
 const Usuario = model('Usuario', usuarioSchema)
 
 const getAll = async () => {
-    return Usuario.find({}, { senha: 0 }) // Exclui o campo 'senha'
+    return Usuario.find({}, { senha: 0 }) // Exclui o campo 'senha' do resultado
 }
 
 //novo usuário
@@ -22,7 +21,6 @@ const newUser = async ({ email, senha }) => {
     return Usuario.create({ email, senha })
 }
 
-//Atenção: para usarmos o id como parametro devemos importar o Object id pois devemos referenciar nossa busca
 
 
 const userExists = async ({ email, id }) => {
