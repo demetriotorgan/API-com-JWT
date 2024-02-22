@@ -1,3 +1,4 @@
+import conn from './mongoConection'
 import {Schema, model} from 'mongoose'
 import jwt from 'jsonwebtoken'
 import dotenv from 'dotenv'
