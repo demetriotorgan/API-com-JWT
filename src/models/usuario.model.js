@@ -1,8 +1,10 @@
 import connection from "./mongoConection"
 import { ObjectId } from "mongodb"
 import jwt from 'jsonwebtoken'
+import dotenv from 'dotenv'
+dotenv.config()
 
-const SCRECT = 'batatinha'
+const SCRECT = process.env.TOKEN_SECRET
 
 
 const getAll = async() =>{

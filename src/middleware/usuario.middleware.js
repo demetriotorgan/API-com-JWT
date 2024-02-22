@@ -1,5 +1,8 @@
 import jwt from 'jsonwebtoken'
-const SCRECT = 'batatinha'
+import dotenv from 'dotenv'
+dotenv.config()
+
+const SCRECT = process.env.TOKEN_SECRET
 
 function VerifyToken(req,res,next){
     const token = req.headers.authorization
