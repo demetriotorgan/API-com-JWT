@@ -1,0 +1,5 @@
+// renomear arquivo para .env
+PORT = 3000
+TOKEN_SECRET = 'batatinha'
+MONGO_DB_URL = 'mongodb://localhost:27017'
+DB_NAME = 'aulas'

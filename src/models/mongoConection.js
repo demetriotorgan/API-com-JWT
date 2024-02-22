@@ -1,7 +1,9 @@
 const {MongoClient} = require('mongodb')
+const dotenv = require('dotenv')
+dotenv.config()
 
-const MONGO_DB_URL = 'mongodb://localhost:27017'
-const DB_NAME = 'aulas'
+const MONGO_DB_URL = process.env.MONGO_DB_URL
+const DB_NAME = process.env.DB_NAME
 
 const connection = () => MongoClient
     .connect(MONGO_DB_URL)
