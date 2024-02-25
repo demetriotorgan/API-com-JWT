@@ -12,5 +12,5 @@ routes.get('/usuario', VerifyToken, getAll)
 routes.post('/usuario', createUser)
 routes.delete('/usuario/:id', deleteUser)
 routes.put('/usuario/:id', updateUser)
-routes.get('/login', requestLogin)
+routes.post('/login', requestLogin)
 export default routes
