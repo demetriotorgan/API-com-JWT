@@ -13,4 +13,5 @@ routes.post('/usuario', createUser)
 routes.delete('/usuario/:id', deleteUser)
 routes.put('/usuario/:id', updateUser)
 routes.post('/login', requestLogin)
+routes.get('/login', VerifyToken)
 export default routes
