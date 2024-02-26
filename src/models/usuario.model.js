@@ -77,7 +77,8 @@ const requestLogin = async (req, res) => {
     const { email, senha } = req.body;
     try {
         const usuario = await login({ email, senha });
-        const token = jwt.sign(
+        const id = usuario._id
+        const accessToken = jwt.sign(
             {
                 userId: usuario._id,
                 email,
@@ -87,7 +88,8 @@ const requestLogin = async (req, res) => {
                 expiresIn: 1440,
             }
         );
-        res.status(201).json({ token });
+        console.log('Login por: ' + usuario)
+        res.status(201).json({id, email, accessToken });
     } catch (error) {
         res.status(401).json({ message: error.message });
     }
